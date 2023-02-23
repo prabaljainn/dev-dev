@@ -41,7 +41,10 @@ export default function SignUpPage() {
         </div>
         <div className="conatiner2-leftside flex">
           <p className="text-white conatiner2-leftside-text roboto">
-            Discover new things on Superapp
+            Discover new things on{" "}
+            <span style={{ color: "#72db73", fontFamily: "Varela Round" }}>
+              Super App
+            </span>
           </p>
         </div>
       </div>
