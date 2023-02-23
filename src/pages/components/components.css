@@ -13,7 +13,7 @@ input {
   border: none;
   border-radius: 0.2em;
   padding: 1em 1.4em;
-  margin: 0.7em 0.5em;
+  margin: 0.4em 0.5em;
   letter-spacing: 0.04em;
   color: white;
 }
@@ -36,4 +36,20 @@ input[type="placeholder"] {
   height: auto;
   padding: 0.7em 0;
   font-size: 20px;
+}
+
+.err {
+  border: red solid 1px;
+}
+
+.err-msg {
+  color: red;
+  margin: 0 0.6em;
+  padding: 0 0;
+  font-size: 0.6em;
+  text-align: left;
+}
+.red-border {
+  border-color: red;
+  border: red dashed 0.001em;
 }
