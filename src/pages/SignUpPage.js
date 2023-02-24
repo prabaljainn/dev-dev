@@ -33,13 +33,15 @@ export default function SignUpPage() {
   };
 
   const checkUnlock = () => {
-    Object.entries(fields).forEach(([key, value]) => {
-      if (value.length === 0 || value === false) {
-        return false;
+    var flag = true;
+    var e = Object.values(fields);
+    e.forEach((element) => {
+      if (element.length === 0 || element === false) {
+        console.log(element.length);
+        flag = false;
       }
     });
-    console.log("true");
-    return true;
+    return flag;
   };
 
   return (
