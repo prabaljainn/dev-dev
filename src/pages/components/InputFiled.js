@@ -2,8 +2,9 @@
 import React from "react";
 import "./components.css";
 import validator from "validator";
-
 export default function InputField(props) {
+  // eslint-disable-next-line no-useless-escape
+  var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
   const onChange = (e) => {
     props.changeFunction(e, props.placeholder);
     if (props.type === "checkbox") {
@@ -54,7 +55,9 @@ export default function InputField(props) {
       </>
     );
   }
-  if (placeholder === "Mobile" && !validator.isMobilePhone(props.data.Mobile)) {
+  if (placeholder === "Mobile" && re.test(props.data.Mobile) === false) {
+    console.log(re.test(props.data.Mobile));
+    console.log(props.data.Mobile);
     return (
       <>
         <div className="txtfield">
