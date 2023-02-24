@@ -48,6 +48,8 @@ input[type="placeholder"] {
   padding: 0 0;
   font-size: 0.6em;
   text-align: left;
+  font-weight: 400;
+  letter-spacing: 0.1em;
 }
 .red-border {
   border-color: red;

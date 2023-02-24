@@ -20,7 +20,7 @@ export default function InputField(props) {
             <input type="checkbox" id="check" name="check" onClick={onChange} />
             <label>Share my registration data with Superapp</label>
           </div>
-          <p className="err-msg">You need to Check this checkbox</p>
+          <p className="err-msg">You need to Check this checkbox ✅</p>
         </div>
       );
     } else {
@@ -49,7 +49,7 @@ export default function InputField(props) {
             onChange={onChange}
             placeholder={props.placeholder}
           />
-          <p className="err-msg">Invalid Email address</p>
+          <p className="err-msg">Invalid Email address ✉</p>
         </div>
       </>
     );
@@ -63,7 +63,7 @@ export default function InputField(props) {
             onChange={onChange}
             placeholder={props.placeholder}
           />
-          <p className="err-msg">Invalid Mobile Number</p>
+          <p className="err-msg">Invalid Mobile Number 📱</p>
         </div>
       </>
     );
@@ -77,7 +77,7 @@ export default function InputField(props) {
               onChange={onChange}
               placeholder={props.placeholder}
             />
-            <p className="err-msg ">{props.placeholder} can't be empty</p>
+            <p className="err-msg ">{props.placeholder} can't be empty 😭</p>
           </div>
         </>
       );
