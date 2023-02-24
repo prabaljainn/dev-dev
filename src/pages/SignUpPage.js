@@ -41,6 +41,7 @@ export default function SignUpPage() {
       }
     });
     return flag;
+    return flag;
   };
 
   return (
