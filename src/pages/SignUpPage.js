@@ -18,6 +18,7 @@ export default function SignUpPage() {
     Mobile: "7894561234",
     checkbox: true,
   });
+  // const [lock, setLock] = useState(false);
 
   const handleChange = (e, name) => {
     if (name === "checkbox") {
@@ -29,7 +30,16 @@ export default function SignUpPage() {
 
   const OnSignUpClick = (e) => {
     setFields2(fields);
-    console.log(fields);
+  };
+
+  const checkUnlock = () => {
+    Object.entries(fields).forEach(([key, value]) => {
+      if (value.length === 0 || value === false) {
+        return false;
+      }
+    });
+    console.log("true");
+    return true;
   };
 
   return (
@@ -95,7 +105,11 @@ export default function SignUpPage() {
               changeFunction={handleChange}
             ></InputField>
           </div>
-          <Button onclick={OnSignUpClick} name="SIGN UP"></Button>
+          <Button
+            onclick={OnSignUpClick}
+            checkUnlock={checkUnlock}
+            name="SIGN UP"
+          ></Button>
           <p className="text-grey align-left">
             By clicking on Sign up. you agree to Superapp{" "}
             <a href="/">

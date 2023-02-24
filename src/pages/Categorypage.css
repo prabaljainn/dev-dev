@@ -1,0 +1,42 @@
+.category-page {
+  background-color: black;
+  height: 100vh;
+}
+
+.category-page-left {
+  background-color: black;
+  flex: 4;
+}
+
+.category-page-right {
+  background-color: black;
+  flex: 5;
+}
+
+.category-page-left p {
+  margin-left: 10vw;
+  margin-right: 6vw;
+  margin-top: 10vh;
+}
+.chip-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 10vw;
+  margin-right: 6vw;
+  margin-top: 4vh;
+}
+.chip-container .chip {
+  margin: 0.4rem 0.6rem;
+}
+
+.right-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 4em 2em;
+  padding-left: 4em;
+  padding-top: 1em;
+  padding-bottom: 0;
+  justify-content: flex-end;
+}

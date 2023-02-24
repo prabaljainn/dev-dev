@@ -6,7 +6,10 @@
   font-family: Roboto;
   cursor: pointer;
 }
-
+.btn p {
+  text-decoration: none;
+  color: white;
+}
 input {
   width: 100%;
   background-color: #292929;
@@ -54,4 +57,15 @@ input[type="placeholder"] {
 .red-border {
   border-color: red;
   border: red dashed 0.001em;
+}
+.next-page {
+  margin-top: 1em;
+  width: 22vh;
+  height: 6vh;
+  background-color: #148a08;
+}
+.button-right {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 3em;
 }
