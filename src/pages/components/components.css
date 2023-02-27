@@ -69,3 +69,6 @@ input[type="placeholder"] {
   justify-content: flex-end;
   margin: 0 3em;
 }
+.black-text {
+  color: black;
+}

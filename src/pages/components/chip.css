@@ -15,7 +15,7 @@
   vertical-align: middle;
   text-decoration: none;
   justify-content: center;
-  background-color: #148a08;
+
   color: white;
 }
 
@@ -30,6 +30,7 @@
 }
 .chip-svg {
   color: #999999;
+
   cursor: pointer;
   height: auto;
   margin: 4px 4px 0 -8px;

@@ -7,6 +7,8 @@ import Card from "./components/Card";
 import data from "./card-data.json";
 import Button from "./components/Button";
 import { json } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export default function CategoryPage() {
   const [sel, setSel] = useState({
     Action: false,
@@ -20,22 +22,20 @@ export default function CategoryPage() {
     Music: false,
   });
   const handler = (name) => {
-    console.log(name);
     if (sel[name] === true) {
-      //
       setSel({ ...sel, [name]: false });
     } else {
-      //
       setSel({ ...sel, [name]: true });
     }
-    console.log(sel);
   };
+  const navigate = useNavigate();
 
   const closeChipHandler = (e) => {
     setSel({ ...sel, [e]: false });
   };
   const signuphandler = () => {
     localStorage.setItem("preferences", JSON.stringify(sel));
+    navigate("/homepage");
   };
   return (
     // eslint-disable-next-line array-callback-return

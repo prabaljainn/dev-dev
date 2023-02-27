@@ -6,10 +6,18 @@ export default function Chip(props) {
   };
 
   return (
-    <div className="chip">
+    <div
+      className="chip"
+      style={
+        props.color === "#9F94FF"
+          ? { backgroundColor: "#9F94FF" }
+          : { backgroundColor: "#148a08" }
+      }
+    >
       <div className="chip-content">{props.field}</div>
       <div className="chip-close">
         <svg
+          style={{ fill: props.color === "#9F94FF" ? "black" : "#999999" }}
           onClick={handler}
           className="chip-svg"
           focusable="false"

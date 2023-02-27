@@ -5,6 +5,8 @@ export default function Card(props) {
   const chooseOne = (e) => {
     props.handler(props.name);
   };
+
+
   if (props.data[props.name] === false) {
     return (
       <div

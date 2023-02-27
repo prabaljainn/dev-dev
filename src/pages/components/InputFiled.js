@@ -31,6 +31,7 @@ export default function InputField(props) {
             <input type="checkbox" id="check" name="check" onClick={onChange} />
             <label>Share my registration data with Superapp</label>
           </div>
+          <p className="err-msg black-text ">‎</p>
           {/* <p className="err-msg">You need to Check this checkbox</p> */}
         </div>
       );
@@ -93,6 +94,7 @@ export default function InputField(props) {
               onChange={onChange}
               placeholder={props.placeholder}
             />
+            <p className="err-msg black-text ">‎ </p>
           </div>
         </>
       );

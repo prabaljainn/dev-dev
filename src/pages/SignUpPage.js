@@ -2,7 +2,34 @@ import React, { useState } from "react";
 import "./SignUpPage.css";
 import Button from "./components/Button";
 import InputField from "./components/InputFiled";
+function getMyLocation() {
+  const location = window.navigator && window.navigator.geolocation;
 
+  if (location) {
+    location.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        console.log(lat, lng);
+
+        localStorage.setItem(
+          "location",
+          JSON.stringify({
+            latitude: lat,
+            longitude: lng,
+          })
+        );
+        // return JSON.stringify({ lat, lng });
+      },
+      (error) => {
+        console.log("Error in position");
+        // return JSON.stringify({ lat: 0, lng: 0 });
+      }
+    );
+  }
+}
+getMyLocation();
 export default function SignUpPage() {
   const [fields, setFields] = useState({
     Name: "",
@@ -28,10 +55,6 @@ export default function SignUpPage() {
     setFields({ ...fields, [name]: e.target.value });
   };
 
-  const OnSignUpClick = (e) => {
-    setFields2(fields);
-  };
-
   const checkUnlock = () => {
     var flag = true;
     var e = Object.values(fields);
@@ -41,7 +64,12 @@ export default function SignUpPage() {
       }
     });
     return flag;
-    return flag;
+  };
+  const OnSignUpClick = (e) => {
+    setFields2(fields);
+    if (checkUnlock() === true) {
+      localStorage.setItem("details", JSON.stringify(fields));
+    }
   };
 
   return (
