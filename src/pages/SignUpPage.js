@@ -11,8 +11,6 @@ function getMyLocation() {
         const lat = position.coords.latitude;
         const lng = position.coords.longitude;
 
-        console.log(lat, lng);
-
         localStorage.setItem(
           "location",
           JSON.stringify({
