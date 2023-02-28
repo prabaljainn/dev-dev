@@ -45,14 +45,15 @@ export default function Homepage() {
   });
 
   useEffect(() => {
+    console.log("USE EFFECT 2");
     const url =
-      "https://newsapi.org/v2/everything?q=tesla&from=2023-01-27&sortBy=publishedAt&apiKey=9cfa008654b04706bd26f469f8e4d78a";
+      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=9cfa008654b04706bd26f469f8e4d78a";
+
     const fetchData = async () => {
       try {
         const response = await fetch(url);
         const json = await response.json();
-        // setBlog(json);
-        console.log(json);
+        setBlog(json);
       } catch (error) {
         console.log("error", error);
       }
@@ -76,6 +77,7 @@ export default function Homepage() {
     },
   });
   useEffect(() => {
+    console.log("USEEFFECT 1");
     const lat = JSON.parse(location).latitude;
     const lng = JSON.parse(location).longitude;
     const url = `http://api.weatherapi.com/v1/current.json?key=a124fc156be0496fbca154859221606&q=${lat},${lng}&aqi=no
@@ -104,8 +106,6 @@ export default function Homepage() {
   const [niggas, setNigga] = useState(preferences);
   const closeChipHandler = (e) => {
     setNigga({ ...niggas, [e]: false });
-    // localStorage.setItem("preferences", { ...preferences, [e]: false });
-    console.log("Hello World");
   };
 
   return (
